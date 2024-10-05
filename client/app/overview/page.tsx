@@ -1,11 +1,21 @@
 import Image from "next/image";
+import Header from "../_components/Header";
+import NavBar from "../_components/NavBar";
 
-export default function Home() {
+export default function Overview() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <h1>
+    <div className="flex flex-col h-full w-full"> 
+      
+      <Header>
         Overview
-      </h1>
+      </Header>
+
+      {/* Main que cresce para ocupar o espaço restante */}
+      <main className="flex-grow bg-gblue-100">
+        a
+      </main>
+
+      <NavBar/>
     </div>
   );
 }

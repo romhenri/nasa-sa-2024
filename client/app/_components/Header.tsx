@@ -4,14 +4,11 @@ const Header = ({ children }) => {
   return (
     <div className={`
       w-full
-      h-2 max-h-8
-      flex justify-center 
+      h-16
+      flex justify-center items-center 
     `}>
       <h1
-        className={`
-          text-xl
-          font-bold
-        `}
+        className={`text-xl font-bold`}
       >
         {children}
       </h1>

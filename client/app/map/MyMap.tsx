@@ -48,8 +48,8 @@ export default function MyMap() {
   }
 
   return (
-    <div style={{ width: '100%', height: '500px' }}> 
-      <Map 
+    <div style={{ width: '100%', height: '100%' }}> 
+      <Map
         center={[-7.1249296, -34.8693021]} 
         zoom={13} 
         style={{ height: '100%', width: '100%' }}

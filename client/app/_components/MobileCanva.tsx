@@ -9,9 +9,9 @@ const MobileCanva = (
     <div
       className="
       bg-slate-200 text-slate-800
-      border-2 border-black
+      outline-2 border-black
       w-full h-full
-      sm:w-[510px] sm:h-[900px]
+      md:w-[510px] md:h-[900px]
       "
     >
       {children}
