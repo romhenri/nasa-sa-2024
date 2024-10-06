@@ -1,52 +1,52 @@
 [
   {
     "id": 1,
-    "name": "John Doe",
+    "name": "Rauane de Carvalho",
     "score": 100
   },
   {
     "id": 2,
-    "name": "Jane Doe",
+    "name": "Luís Eduardo",
     "score": 90
   },
   {
     "id": 3,
-    "name": "Alice",
+    "name": "Larissa Donato",
     "score": 80
   },
   {
     "id": 4,
-    "name": "Bob",
+    "name": "Rômulo Henrique",
     "score": 70
   },
   {
     "id": 5,
-    "name": "Charlie",
+    "name": "Sabrina Lopes",
     "score": 60
   },
   {
     "id": 6,
-    "name": "David",
+    "name": "Ernandes Tavares",
     "score": 50
   },
   {
     "id": 7,
-    "name": "Eve",
+    "name": "Guilherme Gomes",
     "score": 40
   },
   {
     "id": 8,
-    "name": "Frank",
+    "name": "Andrea Moreira",
     "score": 30
   },
   {
     "id": 9,
-    "name": "Grace",
+    "name": "Eduardo Tavares",
     "score": 20
   },
   {
     "id": 10,
-    "name": "Hank",
+    "name": "Rauana de Carvalho",
     "score": 10
   }
 ]
