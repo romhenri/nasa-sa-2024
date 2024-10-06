@@ -15,7 +15,9 @@ const About = () => {
 
   return (
     <div className="flex flex-col h-full w-full">
-      <Header>About Us</Header>
+      <Header>
+        Nosso Time
+      </Header>
 
       <main className="flex-grow bg-gblue-100">
         <Line />

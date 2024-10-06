@@ -1,20 +1,20 @@
 import RankingRow from './RankingRow';
 
-const rankingData = [
-  { position: 1, name: "João", points: 250 },
-  { position: 2, name: "Maria", points: 220 },
-  { position: 3, name: "Carlos", points: 200 }
-];
-
-export default function RankingBoard() {
+export default function RankingBoard({ rankingData }) {
   return (
-    <div className="p-4">
+    <div className="px-4 pb-4 max-h-[560px] overflow-y-auto scrollbar-thin scrollbar-thumb-blue-500 scrollbar-track-gray-300">
       {rankingData.map((person, index) => (
         <RankingRow
           key={index}
-          position={person.position}
+          position={index + 1}
           name={person.name}
-          points={person.points}
+          points={person.score}
+          className={`
+            ${index === 0 || index === 1 || index === 2
+              ? 'border-4 border-yellow-400'
+              : ''}
+            `
+          } 
         />
       ))}
     </div>

@@ -11,7 +11,7 @@ export default function Board() {
         Quadro
       </Header>
 
-      <main className="flex flex-col bg-gblue-100 p-4 gap-2">
+      <main className="flex flex-grow justify-start items-center bg-gblue-100 p-4 gap-2 flex-col">
         {MISSIONS.map((mission, index) => (
           <MissionCard
             key={index}

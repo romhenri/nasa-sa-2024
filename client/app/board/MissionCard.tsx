@@ -2,6 +2,7 @@ import Image from "next/image";
 
 const MissionCard = ({ 
   imageUrl,
+  ods,
   title,
   description,
   rating,
@@ -10,13 +11,16 @@ const MissionCard = ({
   return (
     <div className="max-w-md w-full p-4 bg-slate-200 rounded-lg shadow-md flex items-center space-x-4">
       <div className="w-20 h-20 rounded-lg overflow-hidden">
-        <Image
+        {/* <Image
           src={imageUrl}
           alt={title}
           width={80}
           height={80}
           className="object-cover"
-        />
+        /> */}
+        <div>
+          {ods}
+        </div>
       </div>
 
       {/* Detalhes do produto */}
@@ -33,7 +37,7 @@ const MissionCard = ({
             <span className="text-green-500">★</span>
             <span className="text-sm font-semibold">{rating}</span>
           </div>
-          <div className="text-lg font-bold text-gray-700">+ {points} p</div>
+          <div className="text-lg font-bold text-gray-700">+ {points} pts</div>
         </div>
       </div>
     </div>
