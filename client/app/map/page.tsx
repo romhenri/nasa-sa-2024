@@ -1,7 +1,6 @@
 import 'leaflet/dist/leaflet.css';
 import Header from "../_components/Header"; 
 import NavBar from "../_components/NavBar";
-import MyMap from "./MyMap";
 
 export default function Home() {
   return (
