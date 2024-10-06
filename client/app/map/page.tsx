@@ -11,7 +11,9 @@ export default function Home() {
       </Header>
 
       <main className="flex-grow bg-slate-300">
-        <MyMap />
+
+        Desabilitado Temporariamente.
+        {/* <MyMap /> */}
       </main>
 
       <NavBar/>
