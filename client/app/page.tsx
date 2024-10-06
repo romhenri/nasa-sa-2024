@@ -1,10 +1,18 @@
+'use client';
+
+import { useRouter } from 'next/navigation';
+import { useEffect } from 'react';
 import NavBar from "./_components/NavBar";
 
 export default function Home() {
+  const router = useRouter();
+
+  useEffect(() => {
+    router.push('/overview');
+  }, [router]);
+
   return (
-    <div className="flex flex-col h-full w-full"> {/* h-full e w-full fazem com que o div ocupe o tamanho do contêiner pai */}
-      
-      {/* Header com tamanho fixo */}
+    <div className="flex flex-col h-full w-full"> 
       <div className={`
         w-full
         h-16 /* Define a altura fixa do header */
@@ -17,8 +25,7 @@ export default function Home() {
         </h1>
       </div>
 
-      {/* Main que cresce para ocupar o espaço restante */}
-      <main className="flex-grow bg-slate-100">
+      <main className="flex-grow bg-gblue-100">
         a
       </main>
 

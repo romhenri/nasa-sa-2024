@@ -74,7 +74,7 @@ const MissionCard: React.FC<MissionCardProps> = ({
             <span className="text-sm font-semibold">{rating}</span>
           </div>
         </div>
-        <p className="text-gray-500">
+        <p className="text-gray-500 text-sm">
           {description}
         </p>
 

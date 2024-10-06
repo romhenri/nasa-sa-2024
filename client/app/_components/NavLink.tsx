@@ -25,9 +25,9 @@ const NavLink: React.FC<NavLinkProps> = ({
       <Link 
         href={route} 
         className={`${currentRoute === route
-        ? 'text-[#338F9B]' 
+        ? 'text-[#338F9B] bg-[#338F9B30]' 
         : 'text-gray-600'
-        } flex flex-col items-center justify-center w-full h-full
+        } flex flex-col items-center justify-center w-full h-full rounded
         `}>
           {icon}
           <p className="text-xs text-center">

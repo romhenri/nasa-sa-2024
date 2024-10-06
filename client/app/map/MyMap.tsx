@@ -5,8 +5,31 @@ import { useEffect, useState } from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
+import EXCURSIONS_MARKERS from '../../data/excursions-markers.json';
+
+import redPin from '../../assets/red_pin.png';
+import bluePin from '../../assets/blue_pin.png';
+
 const Map = dynamic(() => import('react-leaflet').then(mod => mod.MapContainer), { ssr: false });
 const TileLayer = dynamic(() => import('react-leaflet').then(mod => mod.TileLayer), { ssr: false });
+const Marker = dynamic(() => import('react-leaflet').then(mod => mod.Marker), { ssr: false });
+const Popup = dynamic(() => import('react-leaflet').then(mod => mod.Popup), { ssr: false });
+
+const redIcon = new L.Icon({
+  iconUrl: redPin.src,
+  iconSize: [36, 41],
+  iconAnchor: [12, 41], 
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41],
+});
+
+const blueIcon = new L.Icon({
+  iconUrl: bluePin.src,
+  iconSize: [36, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41],
+});
 
 function MyMap() {
   const [isClient, setIsClient] = useState(false);
@@ -28,6 +51,23 @@ function MyMap() {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         />
+        {EXCURSIONS_MARKERS.map((marker, index) => (
+          <Marker
+            key={index}
+            position={[marker.coords.lat, marker.coords.long]}
+            icon={redIcon}
+          >
+            <Popup>{marker.name}</Popup>
+          </Marker>
+        ))}
+
+        <Marker position={[-7.1300, -34.8700]} icon={blueIcon}>
+          <Popup>
+            Você está aqui!
+            <br />
+            Ilha Tech
+          </Popup>
+        </Marker>
       </Map>
     </div>
   );

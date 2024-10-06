@@ -36,7 +36,7 @@ const About = () => {
               ? "Gerente de Comunicação" 
               : "Entidade Cósmica"
             }
-            image="https://assets.spaceappschallenge.org/media/images/73b9c47cff9e95d2510d25d1b07cf6de.2e16d0ba.fill-64x64.jpg"
+            image="https://assets.spaceappschallenge.org/media/images/IMG_20240311_085631_491.2e16d0ba.fill-64x64.jpg"
           />
 
           <ProfileCard

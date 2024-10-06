@@ -18,7 +18,7 @@ const NavBar = () => {
   return (
     <div className="w-full h-20 flex justify-center items-center px-8 bg-gray-200">
       <nav>
-        <ul className="flex justify-center w-full space-x-4">
+        <ul className="flex justify-center w-full space-x-4 gap-4">
           <NavLink 
             routeName="Geral" 
             route="/overview" 
@@ -43,12 +43,12 @@ const NavBar = () => {
             icon={<MapIcon />} 
             currentRoute={currentRoute}
           />
-          <NavLink 
+          {/* <NavLink 
             routeName="Time" 
             route="/team" 
             icon={<Rocket />}
             currentRoute={currentRoute}
-          />
+          /> */}
         </ul>
       </nav>
     </div>
