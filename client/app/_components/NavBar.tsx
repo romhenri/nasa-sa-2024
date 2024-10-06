@@ -1,37 +1,57 @@
 "use client";
 
 import React from 'react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation'; // Usando usePathname para obter a rota atual
+import { usePathname } from 'next/navigation'; 
+import NavLink from './NavLink';
+
+import { 
+  House as OverviewIcon,
+  ClipboardList as BoardIcon,
+  SiGoogleclassroom,
+  MapPinned as MapIcon,
+  Users as TeamIcon,
+  Rocket
+} from 'lucide-react';
+import Home from '../page';
+
 
 const NavBar = () => {
-  const currentRoute = usePathname(); // Hook para acessar a rota atual
+  const currentRoute = usePathname();
 
   return (
-    <div className="w-full h-20 flex justify-between items-center px-8 bg-gray-200">
+    <div className="w-full h-20 flex justify-center items-center px-8 bg-gray-200">
       <nav>
-        <ul className="flex justify-center space-x-4">
-          <li>
-            <Link 
-              href="/overview" 
-              className={currentRoute === '/overview' ? 'text-[#338F9B]' : 'text-gray-600'}>
-              Overview
-            </Link>
-          </li>
-          <li>
-            <Link 
-              href="/map" 
-              className={currentRoute === '/map' ? 'text-[#338F9B]' : 'text-gray-600'}>
-              Map
-            </Link>
-          </li>
-          <li>
-            <Link 
-              href="/team" 
-              className={currentRoute === '/team' ? 'text-[#338F9B]' : 'text-gray-600'}>
-              Team
-            </Link>
-          </li>
+        <ul className="flex justify-center w-full space-x-4">
+          <NavLink 
+            routeName="Geral" 
+            route="/overview" 
+            icon={<OverviewIcon />} 
+            currentRoute={currentRoute}
+          />
+          <NavLink 
+            routeName="Quadro" 
+            route="/board" 
+            icon={<BoardIcon />} 
+            currentRoute={currentRoute}
+          />
+          <NavLink 
+            routeName="Turma" 
+            route="/class" 
+            icon={<TeamIcon />} 
+            currentRoute={currentRoute}
+          />
+          <NavLink 
+            routeName="Mapa" 
+            route="/map" 
+            icon={<MapIcon />} 
+            currentRoute={currentRoute}
+          />
+          <NavLink 
+            routeName="Time" 
+            route="/team" 
+            icon={<Rocket />}
+            currentRoute={currentRoute}
+          />
         </ul>
       </nav>
     </div>
