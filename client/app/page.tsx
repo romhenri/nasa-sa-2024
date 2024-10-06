@@ -1,4 +1,3 @@
-import Image from "next/image";
 import NavBar from "./_components/NavBar";
 
 export default function Home() {
@@ -19,7 +18,7 @@ export default function Home() {
       </div>
 
       {/* Main que cresce para ocupar o espaço restante */}
-      <main className="flex-grow bg-gblue-100">
+      <main className="flex-grow bg-slate-100">
         a
       </main>
 

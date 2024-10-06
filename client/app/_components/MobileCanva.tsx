@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
 
-const MobileCanva = (
-  {
-    children
-  }
-) => {
+interface MobileCanvaProps {
+  children: React.ReactNode;
+}
+
+const MobileCanva: React.FC<MobileCanvaProps> = ({ children }) => {
   return (
     <div
       className="
@@ -16,7 +16,7 @@ const MobileCanva = (
     >
       {children}
     </div>
-  )
-}
+  );
+};
 
-export default MobileCanva
+export default MobileCanva;

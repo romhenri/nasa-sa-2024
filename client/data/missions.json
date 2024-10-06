@@ -1,16 +1,26 @@
 [
   {
-    "imageUrl": "/images/missions/mission-1.jpg",
     "title": "Missão 1",
     "description": "Descrição da missão 1",
     "rating": 4.5,
-    "points": 100
+    "points": 100,
+    "ods": 4,
+    "status": "done"
   },
   {
-    "imageUrl": "https://images.unsplash.com/photo-1612838320302-4b3b3b3b3b3b",
     "title": "Missão 2",
     "description": "Descrição da missão 2",
     "rating": 4.8,
-    "points": 150
+    "points": 150,
+    "ods": 5,
+    "status": "doing"
+  },
+  {
+    "title": "Missão 3",
+    "description": "Descrição da missão 3",
+    "rating": 4.9,
+    "points": 200,
+    "ods": 6,
+    "status": "todo"
   }
 ]

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import 'leaflet/dist/leaflet.css';
 import Header from "../_components/Header"; 
 import NavBar from "../_components/NavBar";
@@ -11,7 +10,7 @@ export default function Home() {
         Mapa
       </Header>
 
-      <main className="flex-grow bg-gblue-100">
+      <main className="flex-grow bg-slate-300">
         <MyMap />
       </main>
 

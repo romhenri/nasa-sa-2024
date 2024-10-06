@@ -1,15 +1,17 @@
 import React from 'react';
 
-const Header = ({ children }) => {
+interface HeaderProps {
+  children: React.ReactNode;
+}
+
+const Header: React.FC<HeaderProps> = ({ children }) => {
   return (
-    <div className={`
+    <div className="
       w-full
       h-16
-      flex justify-center items-center 
-    `}>
-      <h1
-        className={`text-xl font-bold`}
-      >
+      flex justify-center items-center
+    ">
+      <h1 className="text-xl font-bold">
         {children}
       </h1>
     </div>

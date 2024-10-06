@@ -1,7 +1,14 @@
 import React from 'react';
 import Link from 'next/link';
 
-const NavLink = ({ 
+interface NavLinkProps {
+  routeName?: string;
+  route: string;
+  icon: React.ReactNode;
+  currentRoute: string;
+}
+
+const NavLink: React.FC<NavLinkProps> = ({ 
   routeName = "",
   route,
   icon,
@@ -10,7 +17,7 @@ const NavLink = ({
   return (
     <li
       className="
-      flex flex-col items-center justify-center center
+      flex flex-col items-center justify-center
       min-w-20 w-20 max-w-20 p-2
       hover:bg-gray-300 rounded
       "
@@ -20,12 +27,10 @@ const NavLink = ({
         className={`${currentRoute === route
         ? 'text-[#338F9B]' 
         : 'text-gray-600'
-        } flex flex-col items-center justify-center center w-full h-full
+        } flex flex-col items-center justify-center w-full h-full
         `}>
           {icon}
-          <p
-            className="text-xs text-center"
-          >
+          <p className="text-xs text-center">
             {routeName}
           </p>
       </Link>

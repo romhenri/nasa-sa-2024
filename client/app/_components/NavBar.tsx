@@ -7,13 +7,10 @@ import NavLink from './NavLink';
 import { 
   House as OverviewIcon,
   ClipboardList as BoardIcon,
-  SiGoogleclassroom,
   MapPinned as MapIcon,
   Users as TeamIcon,
   Rocket
 } from 'lucide-react';
-import Home from '../page';
-
 
 const NavBar = () => {
   const currentRoute = usePathname();

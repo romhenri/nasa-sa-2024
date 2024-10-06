@@ -11,16 +11,18 @@ export default function Board() {
         Quadro
       </Header>
 
-      <main className="flex flex-grow justify-start items-center bg-gblue-100 p-4 gap-2 flex-col">
+      <main className="flex flex-grow justify-start items-center bg-slate-300 p-4 gap-2 flex-col">
         {MISSIONS.map((mission, index) => (
           <MissionCard
             key={index}
-            imageUrl={mission.imageUrl}
             title={mission.title}
             description={mission.description}
             rating={mission.rating}
             points={mission.points}
-          />
+            ods={mission.ods}
+            status={["done", "doing", "todo"].includes(mission.status) ? (mission.status as "done" | "doing" | "todo") : "todo"} 
+        />
+        
         ))}
       </main>
 
