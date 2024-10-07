@@ -1,6 +1,5 @@
-// TeamCard.tsx
-
 import React from 'react';
+import Image from 'next/image';
 
 interface TeamMember {
   name: string;
@@ -48,10 +47,12 @@ const TeamCard: React.FC = () => {
       {teamMembers.map((member, index) => (
         <div key={index} className="flex flex-col items-center space-y-2">
           <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-gray-300">
-            <img
+            <Image
               src={member.image}
               alt={member.name}
               className="object-cover w-full h-full"
+              width={64}
+              height={64}
             />
           </div>
           <p className="text-gray-600 text-sm text-center">   {member.name}
