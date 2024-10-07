@@ -2,7 +2,11 @@
 
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
+
 import NavBar from "./_components/NavBar";
+import Header from "./_components/Header";
+
+import HomeCard from './_components/HomeCard';
 
 export default function Home() {
   const router = useRouter();
@@ -13,20 +17,15 @@ export default function Home() {
 
   return (
     <div className="flex flex-col h-full w-full"> 
-      <div className={`
-        w-full
-        h-16 /* Define a altura fixa do header */
-        flex justify-center items-center 
-      `}>
-        <h1
-          className={`text-xl font-bold`}
-        >
-          Home
-        </h1>
-      </div>
+      <Header >  
+        Meta Verde
+      </Header>    
 
-      <main className="flex-grow bg-gblue-100">
-        a
+      <main className="flex-grow bg-slate-300">
+        <HomeCard
+          title="Meta Verde"
+          description="O Meta Verde é um projeto que visa a preservação do meio ambiente e a conscientização da população sobre a importância da preservação do meio ambiente."
+        />
       </main>
 
       <NavBar/>

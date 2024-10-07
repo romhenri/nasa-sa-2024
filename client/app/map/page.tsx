@@ -9,7 +9,7 @@ export default function Home() {
   const MyMap = useMemo(() => dynamic(
     () => import('./MyMap'),
     { 
-      loading: () => <p>Map is loading</p>,
+      loading: () => <p>Map is loading...</p>,
       ssr: false
     }
   ), []);

@@ -87,7 +87,6 @@ export default function MyMap() {
           </Marker>
         ))}
 
-        Blue Marker
         <Marker position={[-7.1249296, -34.8693021]} icon={blueIcon}>
           <Popup>
             Você está aqui!
