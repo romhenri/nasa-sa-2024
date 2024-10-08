@@ -7,7 +7,7 @@ interface HomeCardProps {
 
 const HomeCard: React.FC<HomeCardProps> = ({ title, description }) => {
   return (
-    <div className="max-w-md w-full min-w-[93%] p-4 m-4 bg-[#338F9B30] rounded-lg shadow-md flex items-center space-x-4">
+    <div className="max-w-md w-full min-w-[93%] p-4 mt-4 bg-[#338F9B30] rounded-lg shadow-md flex items-center space-x-4">
       <div className="flex-1">
         <h3 className="text-[#20626b] font-semibold text-lg">
           {title}

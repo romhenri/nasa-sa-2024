@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 import NavBar from "./_components/NavBar";
 import Header from "./_components/Header";
 
-import HomeCard from './_components/HomeCard';
+import HomeCard from './overview/_components/HomeCard';
 
 export default function Home() {
   const router = useRouter();
@@ -16,10 +16,10 @@ export default function Home() {
   }, [router]);
 
   return (
-    <main className="flex-grow bg-slate-300">
+    <main className="flex-grow bg-slate-300 flex flex-col items-center gap-4 overflow-y-auto scrollbar-thin scrollbar-thumb-blue-600 scrollbar-track-gray-300 md:p-0 px-4">
       <HomeCard
-        title="Meta Verde"
-        description="O Meta Verde é um projeto que visa a preservação do meio ambiente e a conscientização da população sobre a importância da preservação do meio ambiente."
+        title="Seja bem-vindo(a)!"
+        description="plataforma proporciona uma experiência gamificada a alunos do ensino médio, sob a supervisão de seus professores, a fim de educá-los sobre os Objetivos de Desenvolvimento Sustentável (ODS) por meio de atividades práticas e experimentos do Protocolo GLOBE."
       />
     </main>
   );

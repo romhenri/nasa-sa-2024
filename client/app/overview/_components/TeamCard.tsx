@@ -36,29 +36,37 @@ const teamMembers: TeamMember[] = [
 ];
 
 const TeamCard: React.FC = () => {
-  return (<>
-    <div className="text-center text-bold">
-      <h2>Nosso Time:</h2>
+  return (<div className="bg-slate-200 max-w-md w-full min-w-[93%] p-4 rounded-lg shadow-md flex items-center flex-col">
+    <div className="">
+      <h2
+        className="text-center text-bold pb-2"
+      >
+        Nosso Time:
+      </h2>
     </div>
-    <div className="flex min-w-32 min-h-32 gap-4 justify-center overflow-x-auto p-4">
+    <div className="flex min-h-24 gap-4 justify-center overflow-x-auto">
       {teamMembers.map((member, index) => (
         <div key={index} className="flex flex-col items-center space-y-2">
-          <div className="w-16 h-16 min-w-[64px] min-h-[64px] rounded-full overflow-hidden border-2 border-gray-300">
+          <div className="
+            w-[48px] h-[48px]
+            min-w-[32px] min-h-[32px] 
+            rounded-full overflow-hidden border-2 border-gray-300
+          ">
             <Image
               src={member.image}
               alt={member.name}
               className="object-cover w-full h-full"
-              width={64}
-              height={64}
+              width={720}
+              height={720}
             />
           </div>
-          <p className="text-gray-600 text-sm text-center">
+          <p className="text-gray-600 text-xs text-center">
             {member.name}
           </p>
         </div>
       ))}
     </div>
-  </>);
+  </div>);
 };
 
 export default TeamCard;

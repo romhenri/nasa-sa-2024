@@ -16,11 +16,11 @@ const NavBar = () => {
 
   return (
     <div className="
-      w-full h-[60px] flex justify-center items-center px-12
+      w-full h-[60px] flex justify-center items-center px-8
      bg-gray-200 shadow fixed bottom-0 z-[1000] 
      md:relative md:bottom-auto">
       <nav>
-        <ul className="flex justify-center w-full gap-2">
+        <ul className="flex justify-between w-full gap-2">
           <NavLink 
             routeName="Geral" 
             route="/overview" 
