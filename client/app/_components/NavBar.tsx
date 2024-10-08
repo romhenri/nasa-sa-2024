@@ -15,9 +15,9 @@ const NavBar = () => {
   const currentRoute = usePathname();
 
   return (
-    <div className="w-full h-20 flex justify-center items-center px-8 bg-gray-200" style={{ height: '80px' }}>
+    <div className="w-full h-[60px] flex justify-center items-center px-12 bg-gray-200 fixed bottom-0 z-[1000] md:relative md:bottom-auto">
       <nav>
-        <ul className="flex justify-center w-full space-x-4 gap-4">
+        <ul className="flex justify-center w-full space-x-4 gap-2">
           <NavLink 
             routeName="Geral" 
             route="/overview" 

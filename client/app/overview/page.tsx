@@ -7,12 +7,7 @@ import MissionCard from "../board/MissionCard";
 
 export default function Overview() {
   return (
-    <div className="flex flex-col h-screen w-full"> 
-      <Header>
-        Meta Verde
-      </Header>
-
-      <main className="flex-grow bg-slate-300 flex flex-col items-center gap-4 overflow-y-auto scrollbar-thin scrollbar-thumb-blue-600 scrollbar-track-gray-300">
+      <main className="flex-grow bg-slate-300 flex flex-col items-center gap-4 overflow-y-auto scrollbar-thin scrollbar-thumb-blue-600 scrollbar-track-gray-300 md:p-0 px-4">
         <HomeCard
           title="Seja bem-vindo(a)!"
           description="Com desafios e missões, ele incentiva ações sustentáveis e experimentos do protocolo GLOBE no mundo real, como reciclagem e economia de energia, ajudando a reduzir a pegada de carbono."
@@ -37,8 +32,5 @@ export default function Overview() {
           />
         </div>
       </main>
-
-      <NavBar />
-    </div>
   );
 }

@@ -5,7 +5,7 @@ import Header from "../_components/Header";
 import NavBar from "../_components/NavBar";
 import 'leaflet/dist/leaflet.css';
 
-export default function Home() {
+export default function MapPage() {
   const MyMap = useMemo(() => dynamic(
     () => import('./MyMap'),
     { 
@@ -15,18 +15,10 @@ export default function Home() {
   ), []);
 
   return (
-    <div className="flex flex-col h-screen w-full">
-      <Header>
-        Mapa
-      </Header>
-
-      <main className="flex-grow bg-slate-300 flex justify-center items-center">
-        <div className="w-full h-full">
-          <MyMap />
-        </div>
-      </main>
-
-      <NavBar/>
-    </div>
+    <main className="flex-grow bg-slate-300 flex justify-center items-center">
+      <div className="w-full h-full flex-grow">
+        <MyMap />
+      </div>
+    </main>
   );
 }

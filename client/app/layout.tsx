@@ -3,6 +3,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 
 import MobileCanva from "./_components/MobileCanva";
+import Header from "./_components/Header";
+import NavBar from "./_components/NavBar";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -35,7 +37,15 @@ export default function RootLayout({
         `}
       >
         <MobileCanva>
-          {children}
+          <div className="flex flex-col h-screen w-full">
+            <Header>
+              Meta Verde
+            </Header>
+
+            {children}
+
+            <NavBar />
+          </div>
         </MobileCanva>
       </body>
     </html>

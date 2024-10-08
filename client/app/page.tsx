@@ -16,19 +16,11 @@ export default function Home() {
   }, [router]);
 
   return (
-    <div className="flex flex-col h-full w-full"> 
-      <Header >  
-        Meta Verde
-      </Header>    
-
-      <main className="flex-grow bg-slate-300">
-        <HomeCard
-          title="Meta Verde"
-          description="O Meta Verde é um projeto que visa a preservação do meio ambiente e a conscientização da população sobre a importância da preservação do meio ambiente."
-        />
-      </main>
-
-      <NavBar/>
-    </div>
+    <main className="flex-grow bg-slate-300">
+      <HomeCard
+        title="Meta Verde"
+        description="O Meta Verde é um projeto que visa a preservação do meio ambiente e a conscientização da população sobre a importância da preservação do meio ambiente."
+      />
+    </main>
   );
 }
