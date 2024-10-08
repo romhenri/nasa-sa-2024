@@ -11,7 +11,7 @@ const Header: React.FC<HeaderProps> = ({ children }) => {
       h-16
       flex justify-center items-center
       text-[#20626b]
-      bg-gray-200
+      bg-gray-200 shadow
       sticky top-0 z-[1000]
       "
     >

@@ -11,7 +11,7 @@ interface RankingBoardProps {
 
 export default function RankingBoard({ rankingData }: RankingBoardProps) {
   return (
-    <div className="px-4 pb-4 w-full">
+    <div className="pb-4 w-full">
       {rankingData.map((person, index) => (
         <RankingRow
           key={index}

@@ -23,10 +23,10 @@ const getClassScore = (rankingData: RankingData[]): number => {
 
 export default function ClassPage() {
   return (
-    <main className="flex-grow bg-slate-300 flex flex-col justify-start items-center gap-4">
-      <div className="flex flex-col gap-4 max-h-[calc(100vh-160px)] overflow-y-auto scrollbar-thin scrollbar-thumb-blue-600 scrollbar-track-gray-300 px-4 pt-2">
+    <main className="flex-grow flex justify-start items-center bg-slate-300 px-2 pt-2 pb-20 gap-2 flex-col overflow-hidden">
+      <div className="flex flex-col gap-4 h-full max-h-[calc(100vh-130px)] w-full overflow-y-auto scrollbar-thin scrollbar-thumb-blue-600 scrollbar-track-gray-300 px-2 pt-2">
         {CLASS_DATA.map((classItem: ClassData, index: number) => (
-          <div key={index} className="flex justify-center mb-4">
+          <div key={index} className="flex justify-center">
             <ClassCard
               title={classItem.title}
               teacher={classItem.teacher}

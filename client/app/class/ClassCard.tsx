@@ -16,9 +16,9 @@ const ClassCard: React.FC<ClassCardProps> = ({
   return (
     <div className="
       max-w-md w-full min-w-full
-      p-4 mx-4 mt-4
+      p-4
       flex justify-center
-      bg-slate-200 rounded-lg shadow-md flex-col space-y-2">
+      bg-slate-200 rounded-lg shadow-md flex-col">
       <h4 className="text-blue-600 font-semibold text-xl">
         {title} - Turma {year}
       </h4>

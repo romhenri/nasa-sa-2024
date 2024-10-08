@@ -5,6 +5,10 @@ import HomeCard from "../_components/HomeCard";
 import TeamCard from "../_components/TeamCard";
 import MissionCard from "../board/MissionCard";
 
+import MISSIONS from '../../data/missions.json';
+
+const weekMission = MISSIONS[4];
+
 export default function Overview() {
   return (
       <main className="flex-grow bg-slate-300 flex flex-col items-center gap-4 overflow-y-auto scrollbar-thin scrollbar-thumb-blue-600 scrollbar-track-gray-300 md:p-0 px-4">
@@ -21,16 +25,14 @@ export default function Overview() {
           </h2>
         </div>
 
-        <div className="p-4 flex justify-center w-full">
-          <MissionCard 
-            title="Biometria de Árvores"
-            description="Busque árvores de seu interesse e analize, colete fotos e dados."
-            rating={5}
-            points={150}
-            ods={15}
-            status="todo"
-          />
-        </div>
+        <MissionCard 
+          title={weekMission.title}
+          description={weekMission.description}
+          rating={weekMission.rating}
+          points={weekMission.points}
+          ods={weekMission.ods}
+          status={weekMission.status}
+        />
       </main>
   );
 }

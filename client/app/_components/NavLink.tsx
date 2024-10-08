@@ -18,7 +18,7 @@ const NavLink: React.FC<NavLinkProps> = ({
     <li
       className="
       flex flex-col items-center justify-center
-      min-w-20 w-20 max-w-20 p-2
+      min-w-20 w-20 max-w-20
       hover:bg-gray-300 rounded
       "
     >
@@ -27,7 +27,7 @@ const NavLink: React.FC<NavLinkProps> = ({
         className={`${currentRoute === route
         ? 'text-[#338F9B] bg-[#338F9B30]' 
         : 'text-gray-600'
-        } flex flex-col items-center justify-center w-full h-full rounded
+        } flex flex-col items-center justify-center w-full h-full rounded p-1
         `}>
           {icon}
           <p className="text-xs text-center">
