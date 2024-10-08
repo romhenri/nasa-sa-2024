@@ -13,8 +13,8 @@ const RankingRow: React.FC<RankingRowProps> = ({
 }) => {
   return (
     <div className={`
-      flex justify-between items-center p-4 bg-gray-100 rounded-lg shadow-md mb-2
-      ${className}
+      flex justify-between items-center p-4 bg-slate-200 rounded-lg shadow-md mb-2
+      ${className} w-full
     `}>
       <div className="flex items-center space-x-4">
         <span className="text-lg font-bold text-blue-600">

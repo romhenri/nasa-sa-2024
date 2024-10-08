@@ -15,13 +15,15 @@ export default function Home() {
   ), []);
 
   return (
-    <div className="flex flex-col h-full w-full">
+    <div className="flex flex-col h-screen w-full">
       <Header>
         Mapa
       </Header>
 
-      <main className="flex-grow bg-slate-300">
-        <MyMap />
+      <main className="flex-grow bg-slate-300 flex justify-center items-center">
+        <div className="w-full h-full">
+          <MyMap />
+        </div>
       </main>
 
       <NavBar/>

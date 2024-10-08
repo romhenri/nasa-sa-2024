@@ -37,16 +37,13 @@ const teamMembers: TeamMember[] = [
 
 const TeamCard: React.FC = () => {
   return (<>
-    <div
-    className="text-center text-bold">
-      <h2>
-        Nosso Time:
-      </h2>
+    <div className="text-center text-bold">
+      <h2>Nosso Time:</h2>
     </div>
-    <div className="flex gap-4 overflow-x-auto p-4">
+    <div className="flex min-w-32 min-h-32 gap-4 justify-center overflow-x-auto p-4">
       {teamMembers.map((member, index) => (
         <div key={index} className="flex flex-col items-center space-y-2">
-          <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-gray-300">
+          <div className="w-16 h-16 min-w-[64px] min-h-[64px] rounded-full overflow-hidden border-2 border-gray-300">
             <Image
               src={member.image}
               alt={member.name}
@@ -55,7 +52,8 @@ const TeamCard: React.FC = () => {
               height={64}
             />
           </div>
-          <p className="text-gray-600 text-sm text-center">   {member.name}
+          <p className="text-gray-600 text-sm text-center">
+            {member.name}
           </p>
         </div>
       ))}

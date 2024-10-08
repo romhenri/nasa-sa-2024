@@ -9,14 +9,13 @@ import {
   ClipboardList as BoardIcon,
   MapPinned as MapIcon,
   Users as TeamIcon,
-  Rocket
 } from 'lucide-react';
 
 const NavBar = () => {
   const currentRoute = usePathname();
 
   return (
-    <div className="w-full h-20 flex justify-center items-center px-8 bg-gray-200">
+    <div className="w-full h-20 flex justify-center items-center px-8 bg-gray-200" style={{ height: '80px' }}>
       <nav>
         <ul className="flex justify-center w-full space-x-4 gap-4">
           <NavLink 
@@ -43,12 +42,6 @@ const NavBar = () => {
             icon={<MapIcon />} 
             currentRoute={currentRoute}
           />
-          {/* <NavLink 
-            routeName="Time" 
-            route="/team" 
-            icon={<Rocket />}
-            currentRoute={currentRoute}
-          /> */}
         </ul>
       </nav>
     </div>

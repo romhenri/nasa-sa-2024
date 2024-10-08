@@ -11,7 +11,7 @@ interface RankingBoardProps {
 
 export default function RankingBoard({ rankingData }: RankingBoardProps) {
   return (
-    <div className="px-4 pb-4 max-h-[560px] overflow-y-auto scrollbar-thin scrollbar-thumb-blue-500 scrollbar-track-gray-300">
+    <div className="px-4 pb-4 w-full">
       {rankingData.map((person, index) => (
         <RankingRow
           key={index}
