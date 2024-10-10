@@ -60,8 +60,12 @@ export default function MyMap() {
   }
 
   return (
-    <div style={{ width: '100%', height: '100%', flexGrow: 1 }}> {/* Deixar o mapa crescer */}
-      <Map center={[-7.1249296, -34.8693021]} zoom={13} style={{ height: '100%', width: '100%' }}>
+    <div style={{ width: '100%', height: '100%', flexGrow: 1 }}>
+      <Map 
+        center={[-7.1249296, -34.8693021]} 
+        zoom={13} 
+        style={{ height: '100%', width: '100%' }}
+      >
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -78,8 +82,6 @@ export default function MyMap() {
         ))}
         <Marker position={[-7.1249296, -34.8693021]} icon={blueIcon}>
           <Popup>
-            Você está aqui!
-            <br /> 
             Ilha Tech.
           </Popup>
         </Marker>

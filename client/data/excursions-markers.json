@@ -16,8 +16,8 @@
   {
     "name": "Farol Cabo Branco",
     "coords": {
-      "lat": -7.1484496,
-      "long": -34.7925536
+      "lat": -7.1487391,
+      "long": -34.7965829
     }
   },
   {
@@ -30,22 +30,15 @@
   {
     "name": "Desmatamento Polo Turístico Cabo Branco",
     "coords": {
-      "lat": -7.1481521,
-      "long": -34.795072
+      "lat": -7.1192616,
+      "long": -34.8236002
     }
-  },
+  }, 
   {
-    "name": "Desaparecimento de bichos e frutas nativas Praia de Jacarapé",
+    "name": "Poluição do Rio do Timbó",
     "coords": {
-      "lat": -7.1579345,
-      "long": -34.7761968
-    }
-  },
-  {
-    "name": "Desmatamento Mata do Buraquinho",
-    "coords": {
-      "lat": -7.1071263,
-      "long": -34.8466371
+      "lat": -7.1431944,
+      "long": -34.8293545
     }
   }
 ]
