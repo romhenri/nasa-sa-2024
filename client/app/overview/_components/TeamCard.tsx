@@ -1,6 +1,19 @@
+'use client'
+
+import { motion } from 'framer-motion';
 import React from 'react';
 import Image from 'next/image';
 
+const variants = {
+  hidden: {
+    opacity: .5,
+    y: 3
+  },
+  visible: {
+    opacity: 1,
+    y: 0
+  }
+};
 interface TeamMember {
   name: string;
   bio: string;
@@ -44,7 +57,12 @@ const TeamCard: React.FC = () => {
         Nosso Time:
       </h2>
     </div>
-    <div className="flex min-h-24 gap-4 justify-center overflow-x-auto">
+    <motion.div 
+      className="flex min-h-24 gap-4 justify-center overflow-x-auto"
+      initial="hidden" 
+      animate="visible" 
+      variants={variants}
+    >
       {teamMembers.map((member, index) => (
         <div key={index} className="flex flex-col items-center space-y-2">
           <div className="
@@ -65,7 +83,7 @@ const TeamCard: React.FC = () => {
           </p>
         </div>
       ))}
-    </div>
+    </motion.div>
   </div>);
 };
 
