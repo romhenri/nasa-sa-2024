@@ -17,7 +17,7 @@ const RankingRow: React.FC<RankingRowProps> = ({
       ${className} w-full
     `}>
       <div className="flex items-center space-x-4">
-        <span className="text-lg font-bold text-blue-600">
+        <span className="text-lg font-bold text-green-800">
           {position}º
         </span>
         <span className="text-md">{name}</span>

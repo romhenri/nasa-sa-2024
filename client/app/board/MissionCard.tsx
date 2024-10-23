@@ -55,7 +55,7 @@ const MissionCard: React.FC<MissionCardProps> = ({
   const statusInfo = getStatusText(status);
 
   return (
-    <div className="max-w-md w-full p-2 bg-slate-200 rounded-lg shadow-md flex items-center space-x-4">
+    <div className="max-w-md w-full p-2 bg-slate-200 rounded-lg shadow-md flex items-center space-x-4 min-h-[100px]">
       <div className="w-16 h-16 rounded-lg overflow-hidden flex justify-center items-center">
         <div
           className={`w-14 h-14 ${getODSColor(ods)} rounded shadow-lg flex items-center justify-center text-white font-bold text-xl`}
@@ -66,11 +66,11 @@ const MissionCard: React.FC<MissionCardProps> = ({
 
       <div className="flex-1">
         <div className="flex justify-between items-center">
-          <h3 className="text-blue-600 flex font-semibold text-md">
+          <h3 className="text-green-800 flex font-semibold text-md">
             {title}
           </h3>
           <div className="flex items-center space-x-1">
-            <span className="text-green-500">★</span>
+            <span className="text-green-600">★</span>
             <span className="text-sm font-semibold">{rating}</span>
           </div>
         </div>
@@ -78,8 +78,8 @@ const MissionCard: React.FC<MissionCardProps> = ({
           {description}
         </p>
 
-        <div className="flex justify-between items-center mt-2">
-          <div className={`mt-2 font-bold ${statusInfo.color}`}>
+        <div className="flex justify-between mt-2 items-baseline">
+          <div className={`mt-0 font-bold text-sm ${statusInfo.color}`}>
             {statusInfo.text}
           </div>
           <div className="text-sm font-bold text-gray-700 mt-2">

@@ -19,7 +19,7 @@ const ClassCard: React.FC<ClassCardProps> = ({
       p-4
       flex justify-center
       bg-slate-200 rounded-lg shadow-md flex-col">
-      <h4 className="text-blue-600 font-semibold text-xl">
+      <h4 className="text-green-800 font-semibold text-xl">
         {title} - Turma {year}
       </h4>
 

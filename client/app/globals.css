@@ -89,7 +89,7 @@ main {
 }
 
 .scrollbar-thin::-webkit-scrollbar-thumb {
-  background-color: #76c08c; /* Cor da barra */
+  background-color: #339b737a; /* Cor da barra */
   border-radius: 10px; /* Cantos arredondados */
 }
 
