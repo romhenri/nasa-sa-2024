@@ -2,51 +2,61 @@
   {
     "id": 1,
     "name": "Rauane de Carvalho",
-    "score": 100
+    "score": 1000,
+    "phase": ""
   },
   {
     "id": 2,
-    "name": "Luís Eduardo",
-    "score": 90
+    "name": "Letícia Donato",
+    "score": 900,
+    "phase": "asc"
   },
   {
     "id": 3,
-    "name": "Larissa Donato",
-    "score": 80
+    "name": "Geovanna Soars",
+    "score": 800,
+    "phase": ""
   },
   {
     "id": 4,
-    "name": "Rômulo Henrique",
-    "score": 70
+    "name": "Guilherme Gomes",
+    "score": 700,
+    "phase": "des"
   },
   {
     "id": 5,
-    "name": "Sabrina Lopes",
-    "score": 60
+    "name": "Laís Donato",
+    "score": 600,
+    "phase": "asc"
   },
   {
     "id": 6,
     "name": "Ernandes Tavares",
-    "score": 50
+    "score": 500,
+    "phase": ""
   },
   {
     "id": 7,
-    "name": "Guilherme Gomes",
-    "score": 40
+    "name": "Murielle Siqueira",
+    "score": 400,
+    "phase": "des"
   },
   {
     "id": 8,
-    "name": "Andrea Moreira",
-    "score": 30
+    "name": "Marina Lima",
+    "score": 300,
+    "phase": "asc"
   },
   {
     "id": 9,
     "name": "Eduardo Tavares",
-    "score": 20
+    "score": 200,
+    "phase": ""
   },
   {
     "id": 10,
     "name": "Rauana de Carvalho",
-    "score": 10
+    "score": 100,
+    "phase": "r"
   }
 ]

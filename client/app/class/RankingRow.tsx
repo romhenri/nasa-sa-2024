@@ -1,14 +1,22 @@
+import { 
+  ArrowBigUp as AscIcon,
+  ArrowBigDown as DesIcon,
+  Radiation
+} from 'lucide-react';
+
 interface RankingRowProps {
   position: number;
   name: string;
   points: number;
-  className?: string; // className é opcional
+  phase: string;
+  className?: string;
 }
 
 const RankingRow: React.FC<RankingRowProps> = ({ 
   position, 
   name, 
-  points, 
+  points,
+  phase,
   className 
 }) => {
   return (
@@ -20,7 +28,21 @@ const RankingRow: React.FC<RankingRowProps> = ({
         <span className="text-lg font-bold text-green-800">
           {position}º
         </span>
-        <span className="text-md">{name}</span>
+        <span className="text-md flex items-center space-x-1">
+          {name + " "}
+          {phase === "asc" && 
+            <AscIcon 
+              className="text-green-700"
+              strokeWidth={2}
+            />
+          }
+          {phase === "des" && 
+            <DesIcon 
+              className="text-red-800"
+              strokeWidth={2}
+            />
+          }
+        </span>
       </div>
 
       <div className="text-md text-green-600">

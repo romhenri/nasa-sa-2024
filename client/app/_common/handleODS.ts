@@ -15,7 +15,7 @@ export enum ODSColors {
     ODS_14 = 'bg-[#1795d2]',
     ODS_15 = 'bg-[#5bb846]',
     ODS_16 = 'bg-blue-700',
-    ODS_17 = 'bg-indigo-700'
+    ODS_17 = 'bg-indigo-800'
 }
 
 export const getODSColor = (ods: number): string => {
@@ -39,7 +39,7 @@ export enum ODSBgColors {
     ODS_14 = 'bg-[#b3dff2]',
     ODS_15 = 'bg-[#d0edcd]',
     ODS_16 = 'bg-blue-100',
-    ODS_17 = 'bg-indigo-100'
+    ODS_17 = 'bg-indigo-200'
 }
 
 export const getODSBgColor = (ods: number): string => {
