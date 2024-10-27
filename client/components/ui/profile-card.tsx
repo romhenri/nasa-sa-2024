@@ -19,8 +19,7 @@ const ProfileCard : React.FC<IProfileCard>  = (
 ) => {
   return (
     <Card className="flex items-start py-4 px-3 gap-4 w-full 
-    ">
-      {/* Div with image */}
+    bg-slate-200 border-gray-300">
       <div>
         <Avatar>
           <AvatarImage src={image} alt={name} />
