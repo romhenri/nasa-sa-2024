@@ -3,9 +3,6 @@
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
 
-import NavBar from "./_components/NavBar";
-import Header from "./_components/Header";
-
 import HomeCard from './overview/_components/HomeCard';
 
 export default function Home() {

@@ -1,5 +1,3 @@
-import Header from "../_components/Header";
-import NavBar from "../_components/NavBar";
 import MissionCard from "./MissionCard";
 import MISSIONS from '../../data/missions.json';
 
@@ -10,8 +8,10 @@ export default function Board() {
         {MISSIONS.map((mission, index) => (
           <MissionCard
             key={index}
+            id={mission.id}
             title={mission.title}
             description={mission.description}
+            summary={mission.summary}
             rating={mission.rating}
             points={mission.points}
             ods={mission.ods}

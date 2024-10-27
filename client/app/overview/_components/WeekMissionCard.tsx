@@ -14,8 +14,10 @@ const WeekMissionCard = () => {
           Desafio da Semana
         </h2>
 
-        <MissionCard 
+        <MissionCard
+          id={weekMission.id}
           title={weekMission.title}
+          summary={weekMission.summary}
           description={weekMission.description}
           rating={weekMission.rating}
           points={weekMission.points}
