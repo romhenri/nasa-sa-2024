@@ -3,7 +3,8 @@ const nextConfig = {
   images: {
     domains: [
       'images.unsplash.com',
-      'assets.spaceappschallenge.org'
+      'assets.spaceappschallenge.org',
+      'avatars.githubusercontent.com'
     ],
   },
 };
