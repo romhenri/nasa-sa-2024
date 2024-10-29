@@ -1,9 +1,17 @@
 import { 
   ArrowBigUp as AscIcon,
   ArrowBigDown as DesIcon,
-  Radiation
+  CircleDot as PointIcon,
 } from 'lucide-react';
+import { motion } from 'framer-motion';
+import ArrowIcon from './ArrowIcon';
 
+import { Baloo_Chettan_2 } from 'next/font/google';
+
+const balooChettan = Baloo_Chettan_2({
+  weight: '600',
+  subsets: ['latin'],
+});
 interface RankingRowProps {
   position: number;
   name: string;
@@ -11,6 +19,13 @@ interface RankingRowProps {
   phase: string;
   className?: string;
 }
+
+const animationConfig = {
+  initial: { opacity: .5, y: -5 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.3, ease: "easeOut" },
+  whileHover: { x: 5, scale: 1.0 }
+};
 
 const RankingRow: React.FC<RankingRowProps> = ({ 
   position, 
@@ -20,35 +35,44 @@ const RankingRow: React.FC<RankingRowProps> = ({
   className 
 }) => {
   return (
-    <div className={`
-      flex justify-between items-center p-3 bg-slate-200 rounded-lg shadow-md mb-2
-      ${className} w-full
-    `}>
+    <motion.div
+      {...animationConfig}
+      className={`flex justify-between items-center p-3 bg-slate-200 rounded-lg shadow-md mb-2 ${className} w-full hover:bg-[#d5dfeb] transition-colors`}
+      style={{
+        willChange: "transform",
+        backfaceVisibility: "hidden",
+        transformStyle: "preserve-3d"
+      }}
+    >
       <div className="flex items-center space-x-4">
-        <span className="text-lg font-bold text-green-800">
+        <span className="text-lg font-bold text-[#20626b]">
           {position}º
         </span>
-        <span className="text-md flex items-center space-x-1">
+        <span className="text-md flex items-center space-x-4">
           {name + " "}
           {phase === "asc" && 
-            <AscIcon 
-              className="text-green-700"
-              strokeWidth={2}
+            <ArrowIcon
+              color="#3e7d4490"
             />
           }
           {phase === "des" && 
-            <DesIcon 
-              className="text-red-800"
-              strokeWidth={2}
+            <ArrowIcon
+              direction="down"
+              color="#991b1b90"
             />
           }
         </span>
       </div>
 
-      <div className="text-md text-green-600">
-        {points} pts
+      <div className={`flex items-center text-md bold text-blue-700 ${balooChettan.className}`}>
+        {points}
+        <PointIcon
+          className="text-blue-700 mx-1"
+          size={12}
+          strokeWidth={3}
+        />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

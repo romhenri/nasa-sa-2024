@@ -9,6 +9,7 @@ import {
   ClipboardList as BoardIcon,
   MapPinned as MapIcon,
   Users as TeamIcon,
+  CircleUserRound as UserIcon,
 } from 'lucide-react';
 
 const NavBar = () => {
@@ -43,6 +44,13 @@ const NavBar = () => {
             routeName="Mapa" 
             route="/map" 
             icon={<MapIcon />} 
+            currentRoute={currentRoute}
+          />
+
+          <NavLink
+            routeName="Perfil"
+            route="/me"
+            icon={<UserIcon />}
             currentRoute={currentRoute}
           />
         </ul>

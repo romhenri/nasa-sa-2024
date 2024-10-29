@@ -1,5 +1,3 @@
-import Header from "../_components/Header";
-import NavBar from "../_components/NavBar";
 import CLASS_DATA from "../../data/class.json";
 import RANKING_DATA from "../../data/ranking.json";
 import ClassCard from "./ClassCard";

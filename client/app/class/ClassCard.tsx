@@ -1,3 +1,7 @@
+'use client';
+
+import { motion } from 'framer-motion';
+
 interface ClassCardProps {
   title: string;
   teacher: string;
@@ -5,6 +9,13 @@ interface ClassCardProps {
   year: number;
   classScore: number;
 }
+
+const animationConfig = {
+  initial: { opacity: 1, scale: 0.99 },
+  animate: { opacity: 1, scale: 1 },
+  transition: { duration: 0.3, ease: 'easeOut' },
+  whileHover: { scale: 1.0 },
+};
 
 const ClassCard: React.FC<ClassCardProps> = ({ 
   title,
@@ -14,12 +25,16 @@ const ClassCard: React.FC<ClassCardProps> = ({
   classScore
 }) => {
   return (
-    <div className="
-      max-w-md w-full min-w-full
-      p-4
-      flex justify-center
-      bg-slate-200 rounded-lg shadow-md flex-col">
-      <h4 className="text-green-800 font-semibold text-xl">
+    <motion.div
+      {...animationConfig}
+      className="
+        max-w-md w-full min-w-full
+        p-4
+        flex justify-center
+        bg-slate-200 rounded-lg shadow-md flex-col
+      "
+    >
+      <h4 className="text-[#20626b] font-semibold text-xl">
         {title} - Turma {year}
       </h4>
 
@@ -38,7 +53,7 @@ const ClassCard: React.FC<ClassCardProps> = ({
         Pontuação da Turma: 
         <span className="font-bold">{" " + classScore} pts</span>
       </p>
-    </div>
+    </motion.div>
   );
 };
 

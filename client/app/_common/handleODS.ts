@@ -34,10 +34,10 @@ export enum ODSBgColors {
     ODS_9 = 'bg-teal-100',
     ODS_10 = 'bg-indigo-100',
     ODS_11 = 'bg-gray-100',
-    ODS_12 = 'bg-lime-100',
+    ODS_12 = 'bg-[#d0edcd]',
     ODS_13 = 'bg-[#d1e4d5]',
     ODS_14 = 'bg-[#b3dff2]',
-    ODS_15 = 'bg-[#d0edcd]',
+    ODS_15 = 'bg-[#d0edce]',
     ODS_16 = 'bg-blue-100',
     ODS_17 = 'bg-indigo-200'
 }
