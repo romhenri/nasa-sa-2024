@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Coleta - Bessa",
+    "coords": {
+      "lat": -7.0791,
+      "long": -34.8445
+    }
+  },
+  {
+    "name": "Coleta - Bairro dos Estados",
+    "coords": {
+      "lat": -7.1028,
+      "long": -34.8587
+    }
+  },
+  {
+    "name": "Coleta - Mangabeira",
+    "coords": {
+      "lat": -7.1195,
+      "long": -34.8450
+    }
+  },
+  {
+    "name": "Coleta - Jardim Cidade Universitária",
+    "coords": {
+      "lat": -7.1305,
+      "long": -34.8497
+    }
+  },
+  {
+    "name": "Coleta - Mussuré",
+    "coords": {
+      "lat": -7.1991,
+      "long": -34.8846
+    }
+  }
+]

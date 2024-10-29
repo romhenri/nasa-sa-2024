@@ -7,6 +7,7 @@ import 'leaflet/dist/leaflet.css';
 import { useMap } from 'react-leaflet';
 
 import EXCURSIONS_MARKERS from '../../data/excursions-markers.json';
+import RECYCLING_MARKERS from '../../data/recycling-markers.json';
 
 const redIcon = new L.Icon({
   iconUrl: 'https://raw.githubusercontent.com/romhenri/nasa-sa-2024/refs/heads/main/client/assets/red_pin.png?token=GHSAT0AAAAAACUXU2DDQHXMHOSAD5MJXC7WZYB4TLA',
@@ -18,6 +19,14 @@ const redIcon = new L.Icon({
 
 const blueIcon = new L.Icon({
   iconUrl: 'https://raw.githubusercontent.com/romhenri/nasa-sa-2024/refs/heads/main/client/assets/blue_pin.png?token=GHSAT0AAAAAACUXU2DCQIGSMMOJISXCEIPCZYB4YZQ',
+  iconSize: [32, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41],
+});
+
+const greenIcon = new L.Icon({
+  iconUrl: 'https://raw.githubusercontent.com/romhenri/nasa-sa-2024/refs/heads/main/client/assets/green_pin.png',
   iconSize: [32, 41],
   iconAnchor: [12, 41],
   popupAnchor: [1, -34],
@@ -71,6 +80,7 @@ export default function MyMap() {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         />
         <MapClickHandler />
+        
         {EXCURSIONS_MARKERS.map((marker, index) => (
           <Marker 
             key={index}
@@ -80,6 +90,17 @@ export default function MyMap() {
             <Popup>{marker.name}</Popup>
           </Marker>
         ))}
+        
+        {RECYCLING_MARKERS.map((marker, index) => (
+          <Marker 
+            key={index}
+            position={[marker.coords.lat, marker.coords.long]} 
+            icon={greenIcon}
+          >
+            <Popup>{marker.name}</Popup>
+          </Marker>
+        ))}
+
         <Marker position={[-7.1249296, -34.8693021]} icon={blueIcon}>
           <Popup>
             Ilha Tech.
