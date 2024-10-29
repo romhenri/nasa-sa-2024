@@ -18,7 +18,7 @@ const ODSCard: React.FC<ODSCardProps> = ({ ods }) => {
                 {ods}
             </div>
             <div className="flex-1 p-2 mx-0">
-                <h3 className={`font-semibold text-lg ${getODSBgColor(ods)} rounded-md`}>
+                <h3 className={`font-semibold text-md ${getODSBgColor(ods)} rounded-md`}>
                 {getODSTitle(ods)}
                 </h3>
                 <p className="text-gray-500 text-sm mt-1">
