@@ -1,0 +1,25 @@
+{
+  "name": "Meta Verde",
+  "summary": "O Meta Verde proporciona uma experiência gamificada a alunos do ensino fundamental e médio, sob a supervisão de seus professores, a fim de educá-los sobre os Objetivos de Desenvolvimento Sustentável (ODS) por meio de atividades práticas e experimentos do Protocolo GLOBE.",
+  "version": "0.10.31",
+  "publishedYear": 2024,
+  "updatedYear": 2024,
+  "authors": [
+    "Andrea Moreira",
+    "Larissa Donato",
+    "Luís Eduardo",
+    "Rômulo Henrique",
+    "Sabrina Lopes"
+  ],
+  "license": "Other",
+  "categories": ["Educação", "Sustentabilidade", "Meio Ambiente"],
+  "languages": ["pt-BR"],
+  "keywords": [
+    "sustentabilidade",
+    "meio ambiente",
+    "ecologia", 
+    "educação",
+    "missões",
+    "eco-friendly"
+  ]
+}
