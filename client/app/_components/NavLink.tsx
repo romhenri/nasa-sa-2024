@@ -18,7 +18,7 @@ const NavLink: React.FC<NavLinkProps> = ({
     <li
       className="
       flex flex-col items-center justify-center
-      min-w-20 w-20 max-w-20
+      min-w-16 w-16 max-w-16
       hover:bg-gray-300 rounded
       "
     >

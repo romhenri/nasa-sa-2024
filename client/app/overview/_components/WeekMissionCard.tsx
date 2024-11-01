@@ -6,7 +6,7 @@ const weekMission = MISSIONS[4];
 const WeekMissionCard = () => {
   return (
     <div className="text-[#20626b] border-[#31919e] border-2
-    pb-4 max-w-md w-full min-w-[93%] px-4 rounded-lg shadow-md items-center
+    pb-4 max-w-md w-full min-w-[93%] px-4 rounded-lg shadow-md items-center mb-20
     ">
         <h2
           className="font-bold  p-2 text-center"
