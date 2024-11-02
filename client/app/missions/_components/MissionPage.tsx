@@ -8,17 +8,7 @@ import ODSCard from './ODSCard';
 import { getStatusText } from '@common/handleMissions';
 import { animPopCenter } from "@common/handleAnimations";
 
-interface MissionPageProps {
-  ods: number;
-  title: string;
-  description: string;
-  rating: number;
-  points: number;
-  status: "done" | "doing" | "todo";
-  context: string;
-  count: number;
-  summary: string;
-}
+import { MissionPageProps } from '@/types/MissionProps';
 
 const MissionPage: React.FC<MissionPageProps> = ({ 
   ods,

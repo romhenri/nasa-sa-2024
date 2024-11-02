@@ -5,6 +5,8 @@ import { motion } from 'framer-motion';
 import { getODSColor } from '@common/handleODS';
 import { getStatusText } from '@common/handleMissions';
 
+import { MissionCardProps } from '@/types/MissionProps';
+
 import {
   CircleDot as PointIcon,
 } from 'lucide-react';
@@ -15,17 +17,6 @@ const balooChettan = Baloo_Chettan_2({
   weight: '600',
   subsets: ['latin'],
 });
-interface MissionCardProps {
-  id: number;
-  ods: number;
-  title: string;
-  description: string;
-  summary: string;
-  rating: number;
-  points: number;
-  status: "done" | "doing" | "todo";
-  anim?: "right" | "center";
-}
 
 const MissionCard: React.FC<MissionCardProps> = ({ 
   id,
@@ -35,7 +26,7 @@ const MissionCard: React.FC<MissionCardProps> = ({
   rating,
   points,
   status = "todo",
-  anim = "center" // Valor padrão
+  anim = "center"
 }) => {
   const router = useRouter();
   const statusInfo = getStatusText(status);
