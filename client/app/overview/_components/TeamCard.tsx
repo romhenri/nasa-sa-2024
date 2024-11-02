@@ -5,6 +5,8 @@ import React from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
+import { animPopCenterClick } from "@common/handleAnimations";
+
 import TEAM_DATA from '@data/team.json';
 
 interface TeamMember {
@@ -12,14 +14,6 @@ interface TeamMember {
   bio: string;
   image: string;
 }
-
-const animationConfig = {
-  initial: { opacity: 1, scale: 0.99 },
-  animate: { opacity: 1, scale: 1 },
-  transition: { duration: 0.3, ease: 'easeOut' },
-  whileHover: { scale: 1.0 },
-  whileTap: { scale: 0.95 },
-};
 
 const TeamCard: React.FC = () => {
   const router = useRouter();
@@ -31,7 +25,7 @@ const TeamCard: React.FC = () => {
   return (
     <motion.div
       onClick={handleClick}
-      {...animationConfig} // Aplicação das configurações de animação
+      {...animPopCenterClick}
       className="bg-slate-200 max-w-md w-full min-w-[93%] p-4 rounded-lg shadow-md flex items-center flex-col cursor-pointer hover:bg-slate-300 transition-colors"
     >
       <div className="">

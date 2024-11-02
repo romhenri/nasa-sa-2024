@@ -2,6 +2,8 @@
 
 import { motion } from 'framer-motion';
 
+import { animPopCenter } from "@common/handleAnimations";
+
 interface ClassCardProps {
   title: string;
   teacher: string;
@@ -9,13 +11,6 @@ interface ClassCardProps {
   year: number;
   classScore: number;
 }
-
-const animationConfig = {
-  initial: { opacity: 1, scale: 0.99 },
-  animate: { opacity: 1, scale: 1 },
-  transition: { duration: 0.3, ease: 'easeOut' },
-  whileHover: { scale: 1.0 },
-};
 
 const ClassCard: React.FC<ClassCardProps> = ({ 
   title,
@@ -26,7 +21,7 @@ const ClassCard: React.FC<ClassCardProps> = ({
 }) => {
   return (
     <motion.div
-      {...animationConfig}
+      {...animPopCenter}
       className="
         max-w-md w-full min-w-full
         p-4

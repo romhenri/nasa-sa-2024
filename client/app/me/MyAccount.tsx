@@ -8,6 +8,8 @@ import {
   Star as StarIcon,
 } from 'lucide-react';
 
+import { animPopCenter } from "@common/handleAnimations";
+
 import { Baloo_Chettan_2 } from 'next/font/google';
 
 const balooChettan = Baloo_Chettan_2({
@@ -24,13 +26,6 @@ interface AccountPageProps {
   bio?: string;
 }
 
-const animationConfig = {
-  initial: { opacity: 1, scale: 0.99 },
-  animate: { opacity: 1, scale: 1 },
-  transition: { duration: 0.3, ease: 'easeOut' },
-  whileHover: { scale: 1.0 },
-};
-
 const MyAccount: React.FC<AccountPageProps> = ({ 
   name,
   username,
@@ -41,7 +36,7 @@ const MyAccount: React.FC<AccountPageProps> = ({
 }) => {
   return (
     <motion.div
-      {...animationConfig}
+      {...animPopCenter}
       className="max-w-2xl w-full p-4 bg-slate-200 rounded-lg shadow-md flex flex-col items-center"
     >
       <div className="relative w-full h-32 bg-cover bg-center rounded-lg mb-2" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1582741099331-e0918de0565f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)' }}>

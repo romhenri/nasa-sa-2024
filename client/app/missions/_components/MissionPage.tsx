@@ -4,7 +4,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { getODSBgColor } from '@common/handleODS';
 import ODSCard from './ODSCard';
+
 import { getStatusText } from '@common/handleMissions';
+import { animPopCenter } from "@common/handleAnimations";
 
 interface MissionPageProps {
   ods: number;
@@ -17,13 +19,6 @@ interface MissionPageProps {
   count: number;
   summary: string;
 }
-
-const animationConfig = {
-  initial: { opacity: 1, scale: 0.99 },
-  animate: { opacity: 1, scale: 1 },
-  transition: { duration: 0.3, ease: 'easeOut' },
-  whileHover: { scale: 1.0 },
-};
 
 const MissionPage: React.FC<MissionPageProps> = ({ 
   ods,
@@ -44,7 +39,7 @@ const MissionPage: React.FC<MissionPageProps> = ({
 
   return (
     <motion.div
-      {...animationConfig}
+      {...animPopCenter}
       className="max-w-2xl w-full p-4 bg-slate-200 rounded-lg shadow-md flex flex-col"
     >
       <div className="">

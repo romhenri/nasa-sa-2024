@@ -1,7 +1,8 @@
 # TODO Checklist
 
 - [X] Simple API;
-- [ ] handleAnimations;
+- [X] handleAnimations;
+- [ ] handleRanking;
 - [ ] Organize Components;
 - [ ] Map Explications;
 - [ ] Login n SignUp;
