@@ -6,6 +6,8 @@ import MobileCanva from "./_components/MobileCanva";
 import Header from "./_components/Header";
 import NavBar from "./_components/NavBar";
 
+import { UserProvider } from "@context/UserContext";
+
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -36,17 +38,17 @@ export default function RootLayout({
           flex flex-col items-center justify-center
         `}
       >
-        <MobileCanva>
-          <div className="flex flex-col h-screen w-full">
-            <Header>
-              Meta Verde
-            </Header>
+        <UserProvider>
+          <MobileCanva>
+            <div className="flex flex-col h-screen w-full">
+              <Header>Meta Verde</Header>
 
-            {children}
+              {children}
 
-            <NavBar />
-          </div>
-        </MobileCanva>
+              <NavBar />
+            </div>
+          </MobileCanva>
+        </UserProvider>
       </body>
     </html>
   );

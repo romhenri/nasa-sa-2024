@@ -24,6 +24,7 @@
       "@comp/*": ["./app/_components/*"],
       "@radix/*": ["./components/ui/*"],
       "@types/*": ["./types/*"],
+      "@context/*": ["./contexts/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
