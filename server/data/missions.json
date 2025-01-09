@@ -1,0 +1,86 @@
+[
+    {
+      "id": 1,
+      "title": "Medição da Temperatura",
+      "description": "Meça a temperatura em diferentes momentos do dia e observe sua variação e média.",
+      "summary": "Meça a temperatura em diferentes momentos do dia e observe sua variação e média.",
+      "rating": 4.5,
+      "points": 100,
+      "ods": 13,
+      "status": "todo",
+      "count": 152,
+      "context": "Monitorar a temperatura ajuda a entender o clima local de João Pessoa e planejar ações de adaptação às mudanças climáticas."
+    },
+    {
+      "id": 2,
+      "title": "Observação de Nuvens",
+      "description": "Observe o movimento e características das nuvens, tente identificar seus tipos.",
+      "summary": "Observe o movimento e características das nuvens, tente identificar seus tipos.",
+      "rating": 4.1,
+      "points": 200,
+      "ods": 13,
+      "status": "todo",
+      "count": 87,
+      "context": "Observar as nuvens em João Pessoa ajuda a antecipar mudanças no clima e reforça a educação ambiental na comunidade."
+    },
+    {
+      "id": 3,
+      "title": "Cultivo de Árvores Nativas",
+      "description": "Busque conhecer quais árvores são nativas do País, e cultive uma.",
+      "summary": "Busque conhecer quais árvores são nativas do País, e cultive uma.",
+      "rating": 4.9,
+      "points": 200,
+      "ods": 15,
+      "status": "done",
+      "count": 312,
+      "context": "O cultivo de árvores nativas ajuda a preservar a biodiversidade e a melhorar a qualidade do ar em João Pessoa."
+    },
+    {
+      "id": 4,
+      "title": "Coleta de Dados de Vida Aquática",
+      "description": "Encontre um corpo de água local e analise as formas de vida, volte e veja como se desenvolveram.",
+      "summary": "Encontre um corpo de água local e analise as formas de vida, volte e veja como se desenvolveram.",
+      "rating": 4.0,
+      "points": 100,
+      "ods": 14,
+      "status": "done",
+      "count": 45,
+      "context": "Analisar a vida aquática em corpos d'água de João Pessoa ajuda a monitorar a saúde ambiental e proteger os ecossistemas locais."
+    },
+    {
+      "id": 5,
+      "title": "Redução do Uso de Plásticos",
+      "description": "Reduza o uso de plásticos em seu dia a dia, substituindo por materiais sustentáveis.",
+      "summary": "Incentivo à redução de plásticos para melhorar a sustentabilidade.",
+      "rating": 4.7,
+      "points": 90,
+      "ods": 12,
+      "status": "todo",
+      "count": 175,
+      "context": "Reduzir o uso de plásticos em João Pessoa ajuda a manter o meio ambiente limpo e a proteger a vida marinha."
+    },
+    {
+      "id": 6,
+      "title": "Biometria de Árvores",
+      "description": "Busque árvores de seu interesse e analise, colete fotos e dados.",
+      "summary": "Busque árvores de seu interesse e analise, colete fotos e dados.",
+      "rating": 5,
+      "points": 150,
+      "ods": 15,
+      "status": "done",
+      "count": 236,
+      "context": "Analisar as árvores em João Pessoa auxilia no mapeamento da flora urbana e na conservação ambiental."
+    },
+    {
+      "id": 7,
+      "title": "Reciclagem de Resíduos Orgânicos",
+      "description": "Pratique a reciclagem de resíduos orgânicos por meio de compostagem em sua casa.",
+      "summary": "Transforme resíduos orgânicos em composto para o solo.",
+      "rating": 4.6,
+      "points": 110,
+      "ods": 12,
+      "status": "done",
+      "count": 212,
+      "context": "A compostagem doméstica em João Pessoa ajuda a reduzir a quantidade de lixo e a enriquecer o solo."
+    }
+  ]
