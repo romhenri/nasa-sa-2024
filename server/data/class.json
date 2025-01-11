@@ -1,68 +1,71 @@
-{
-    "title": "Sousa EC",
-    "teacher": "Nacib Gurgel",
-    "school": "CI - UFPB",
-    "year": 2024,
-    "students": [
-        {
-            "id": 1,
-            "name": "Rauane de Carvalho",
-            "score": 1000,
-            "phase": ""
-        },
-        {
-            "id": 2,
-            "name": "Letícia Donato",
-            "score": 900,
-            "phase": "asc"
-        },
-        {
-            "id": 3,
-            "name": "Geovanna Soars",
-            "score": 800,
-            "phase": ""
-        },
-        {
-            "id": 4,
-            "name": "Guilherme Gomes",
-            "score": 700,
-            "phase": "des"
-        },
-        {
-            "id": 5,
-            "name": "Laís Donato",
-            "score": 600,
-            "phase": "asc"
-        },
-        {
-            "id": 6,
-            "name": "Ernandes Tavares",
-            "score": 500,
-            "phase": ""
-        },
-        {
-            "id": 7,
-            "name": "Murielle Siqueira",
-            "score": 400,
-            "phase": "des"
-        },
-        {
-            "id": 8,
-            "name": "Marina Lima",
-            "score": 300,
-            "phase": "asc"
-        },
-        {
-            "id": 9,
-            "name": "Eduardo Tavares",
-            "score": 200,
-            "phase": ""
-        },
-        {
-            "id": 10,
-            "name": "Rauana de Carvalho",
-            "score": 100,
-            "phase": "r"
-        }
-    ]
-}
+[
+    {
+        "title": "Sousa EC",
+        "teacher": "Nacib Gurgel",
+        "school": "CI - UFPB",
+        "year": 2024,
+        "id": 1,
+        "students": [
+            {
+                "id": 1,
+                "name": "Rauane de Carvalho",
+                "score": 1000,
+                "phase": ""
+            },
+            {
+                "id": 2,
+                "name": "Letícia Donato",
+                "score": 900,
+                "phase": "asc"
+            },
+            {
+                "id": 3,
+                "name": "Geovanna Soars",
+                "score": 800,
+                "phase": ""
+            },
+            {
+                "id": 4,
+                "name": "Guilherme Gomes",
+                "score": 700,
+                "phase": "des"
+            },
+            {
+                "id": 5,
+                "name": "Laís Donato",
+                "score": 600,
+                "phase": "asc"
+            },
+            {
+                "id": 6,
+                "name": "Ernandes Tavares",
+                "score": 500,
+                "phase": ""
+            },
+            {
+                "id": 7,
+                "name": "Murielle Siqueira",
+                "score": 400,
+                "phase": "des"
+            },
+            {
+                "id": 8,
+                "name": "Marina Lima",
+                "score": 300,
+                "phase": "asc"
+            },
+            {
+                "id": 9,
+                "name": "Eduardo Tavares",
+                "score": 200,
+                "phase": ""
+            },
+            {
+                "id": 10,
+                "name": "Rauana de Carvalho",
+                "score": 100,
+                "phase": "r"
+            }
+        ]
+    }
+]
