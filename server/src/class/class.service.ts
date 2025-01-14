@@ -6,42 +6,48 @@ export class ClassService {
   private readonly filePath = './data/class.json';
 
   /**
-   * Retorna todas as turmas sem filtros.
+   * Retorna todas as turmas, aplicando filtros opcionais se fornecidos.
+   * @param filters Filtros opcionais para a listagem
    */
-  getAllClasses(): any {
-    return this.readData();
+  getClasses(filters?: { name?: string; teacher?: string; year?: number; minScore?: number; maxScore?: number }): any {
+    let classes = this.readData();
+
+    if (!filters) return classes;
+
+    return classes
+    .filter((c: any) =>
+      (!filters.name || c.name.toLowerCase().includes(filters.name.toLowerCase())) &&
+      (!filters.teacher || c.teacher.toLowerCase().includes(filters.teacher.toLowerCase())) &&
+      (!filters.year || c.year === filters.year)
+    )
+    .map((c: any) => ({
+      ...c,
+      students: c.students ? c.students.filter((student: any) =>
+        (!filters.minScore || student.score >= filters.minScore) &&
+        (!filters.maxScore || student.score <= filters.maxScore)
+      ) : []
+    }));
   }
 
   /**
-   * Retorna uma turma pelo ID e filtra os alunos pelo score, se necessário.
+   * Retorna uma turma pelo ID.
    * @param id ID da turma
-   * @param minScore Valor mínimo de score (opcional)
-   * @param maxScore Valor máximo de score (opcional)
    */
-  getClassByIdWithFilter(id: string, minScore?: number, maxScore?: number): any {
+  getClassById(id: string): any {
     const classes = this.readData();
     const classId = Number(id);
 
     const foundClass = classes.find((c: any) => c.id === classId);
 
     if (!foundClass) {
-      return { message: 'Not Found', };
-    }
-
-    if (minScore !== undefined || maxScore !== undefined) {
-      foundClass.students = foundClass.students.filter((student: any) => {
-        return (
-          (minScore === undefined || student.score >= minScore) &&
-          (maxScore === undefined || student.score <= maxScore)
-        );
-      });
+      return { message: 'Turma não encontrada' };
     }
 
     return foundClass;
   }
 
   /**
-   * Lê o arquivo JSON e retornar os dados.
+   * Lê o arquivo JSON e retorna os dados.
    */
   private readData(): any {
     try {
