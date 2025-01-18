@@ -8,9 +8,10 @@ import { ClassService } from './class/class.service';
 
 import { MissionsController } from './missions/missions.controller';
 import { MissionsService } from './missions/missions.service';	
+import { AuthModule } from './auth/auth.module';
 
 @Module({
-  imports: [],
+  imports: [AuthModule],
   controllers: [AppController, ClassController, MissionsController],
   providers: [AppService, ClassService, MissionsService],
 })
