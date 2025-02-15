@@ -1,14 +1,16 @@
 import { Controller, Post, Body, UseGuards, Request, SetMetadata } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { JwtAuthGuard } from './jwt-auth.guard';
+import { ThrottlerGuard } from '@nestjs/throttler';
 
 export const IS_PUBLIC_KEY = 'isPublic';
 export const Public = () => SetMetadata(IS_PUBLIC_KEY, true);
 
 @Controller('auth')
+@UseGuards(ThrottlerGuard)
 export class AuthController {
   constructor(private readonly authService: AuthService) {}
-
+  
   @Public()
   @Post('login')
   async login(@Body() body: any) {
