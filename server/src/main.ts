@@ -6,9 +6,9 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   const config = new DocumentBuilder()
-    .setTitle('My API')
-    .setDescription('API documentation for my NestJS application')
-    .setVersion('0.0')
+    .setTitle('MetaVerde API')
+    .setDescription('API documentation for MetaVerde Server-Side')
+    .setVersion('1.0')
     .addBearerAuth() 
     .build();
 
