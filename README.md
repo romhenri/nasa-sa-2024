@@ -13,7 +13,7 @@ The “Meta Verde” app is a platform that provides a gamified experience to hi
 </div>
 
 ### Demonstration
-[![Watch the video](https://img.youtube.com/vi/SGqFDridfAw/0.jpg)](https://www.youtube.com/watch?v=SGqFDridfAw)
+[![Watch the video](https://img.youtube.com/vi/SGqFDridfAw/0.jpg)](https://youtu.be/qzvebO6FJbA)
 
 ## About Code
 We made the Client with Next, React, Tailwind, all designed for integration with the Server.
