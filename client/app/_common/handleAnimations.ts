@@ -1,7 +1,7 @@
 export const animPopCenter= {
     initial: { opacity: 1, scale: 0.99 },
     animate: { opacity: 1, scale: 1 },
-    transition: { duration: 0.3, ease: 'easeOut' },
+    transition: { duration: 0.3, ease: 'easeOut' as const },
     whileHover: { scale: 1.0 },
 };
 

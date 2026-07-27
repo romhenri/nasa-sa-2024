@@ -40,14 +40,14 @@ const MissionCard: React.FC<MissionCardProps> = ({
       ? {
           initial: { opacity: 0, x: -11 },
           animate: { opacity: 1, x: 0 },
-          transition: { duration: 0.2, ease: "easeOut" },
+          transition: { duration: 0.2, ease: "easeOut" as const },
           whileHover: { x: 5 },
           whileTap: { x: 15 },
         }
       : {
           initial: { opacity: .5, scale: 0.98 },
           animate: { opacity: 1, scale: 1 },
-          transition: { duration: 0.3, ease: "easeOut" },
+          transition: { duration: 0.3, ease: "easeOut" as const },
           whileHover: { scale: 1 },
           whileTap: { scale: 0.95 },
         };

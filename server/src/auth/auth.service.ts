@@ -19,7 +19,11 @@ export class AuthService {
 
     for (const user of rawUsers) {
       const hashedPassword = await bcrypt.hash(user.password, 10);
-      this.users.push({ id: user.id, username: user.username, password: hashedPassword });
+      this.users.push({
+        id: user.id,
+        username: user.username,
+        password: hashedPassword,
+      });
     }
   }
 

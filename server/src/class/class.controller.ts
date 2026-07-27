@@ -18,7 +18,7 @@ export class ClassController {
   findAll(
     @Query('name') name?: string,
     @Query('teacher') teacher?: string,
-    @Query('year') year?: string
+    @Query('year') year?: string,
   ): any {
     return this.classService.getClasses({
       name,
@@ -43,9 +43,10 @@ export class ClassController {
   @ApiOperation({ summary: 'Listar Alunos de uma Turma com Filtros' })
   @ApiQuery({ name: 'min_score', required: false })
   @ApiQuery({ name: 'max_score', required: false })
-  findStudents(@Param('id') id: string,
+  findStudents(
+    @Param('id') id: string,
     @Query('min_score') minScore?: string,
-    @Query('max_score') maxScore?: string
+    @Query('max_score') maxScore?: string,
   ): any {
     return this.classService.getStudents(id, {
       minScore: Number(minScore),

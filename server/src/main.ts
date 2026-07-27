@@ -9,7 +9,7 @@ async function bootstrap() {
     .setTitle('MetaVerde API')
     .setDescription('API documentation for MetaVerde Server-Side')
     .setVersion('1.0')
-    .addBearerAuth() 
+    .addBearerAuth()
     .build();
 
   const document = SwaggerModule.createDocument(app, config);

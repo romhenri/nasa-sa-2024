@@ -15,21 +15,27 @@ dotenv.config();
 
 @Module({
   imports: [
-    PassportModule.register({ defaultStrategy: 'jwt' }), 
+    PassportModule.register({ defaultStrategy: 'jwt' }),
     JwtModule.register({
       secret: process.env.JWT_SECRET,
       signOptions: { expiresIn: '1h' },
     }),
-    ThrottlerModule.forRoot([{
-      ttl: 60000,
-      limit: 3,
-    }]),
+    ThrottlerModule.forRoot([
+      {
+        ttl: 60000,
+        limit: 3,
+      },
+    ]),
   ],
   controllers: [AuthController],
-  providers: [AuthService, JwtStrategy, {
-    provide: ThrottlerGuard,
-    useClass: ThrottlerGuard,
-  } ],
+  providers: [
+    AuthService,
+    JwtStrategy,
+    {
+      provide: ThrottlerGuard,
+      useClass: ThrottlerGuard,
+    },
+  ],
 
   exports: [AuthService, JwtModule],
 })

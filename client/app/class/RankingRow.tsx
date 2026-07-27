@@ -23,7 +23,7 @@ interface RankingRowProps {
 const animationConfig = {
   initial: { opacity: .5, y: -5 },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.3, ease: "easeOut" },
+  transition: { duration: 0.3, ease: "easeOut" as const },
   whileHover: { x: 5, scale: 1.0 }
 };
 

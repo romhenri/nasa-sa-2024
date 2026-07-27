@@ -14,7 +14,7 @@ export class MissionsController {
     @Query('status') status?: string,
     @Query('id') id?: string,
     @Query('max_points') max_points?: string,
-    @Query('min_points') min_points?: string
+    @Query('min_points') min_points?: string,
   ): any {
     if (!ods && !status && !id && !max_points && !min_points) {
       return this.missionsService.getAllMissions();
@@ -25,7 +25,7 @@ export class MissionsController {
       status,
       id ? Number(id) : undefined,
       max_points ? Number(max_points) : undefined,
-      min_points ? Number(min_points) : undefined
+      min_points ? Number(min_points) : undefined,
     );
   }
 }

@@ -1,4 +1,11 @@
-import { Controller, Post, Body, UseGuards, Request, SetMetadata } from '@nestjs/common';
+import {
+  Controller,
+  Post,
+  Body,
+  UseGuards,
+  Request,
+  SetMetadata,
+} from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { JwtAuthGuard } from './jwt-auth.guard';
 import { ThrottlerGuard } from '@nestjs/throttler';
@@ -10,11 +17,14 @@ export const Public = () => SetMetadata(IS_PUBLIC_KEY, true);
 @UseGuards(ThrottlerGuard)
 export class AuthController {
   constructor(private readonly authService: AuthService) {}
-  
+
   @Public()
   @Post('login')
   async login(@Body() body: any) {
-    const user = await this.authService.validateUser(body.username, body.password);
+    const user = await this.authService.validateUser(
+      body.username,
+      body.password,
+    );
     if (!user) {
       throw new Error('Usuário ou senha inválidos');
     }

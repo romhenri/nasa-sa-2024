@@ -1,8 +1,6 @@
 import { Controller, Get, SetMetadata } from '@nestjs/common';
 import { AppService } from './app.service';
-import {
-  ApiOperation,
-} from '@nestjs/swagger';
+import { ApiOperation } from '@nestjs/swagger';
 
 export const IS_PUBLIC_KEY = 'isPublic';
 export const Public = () => SetMetadata(IS_PUBLIC_KEY, true);
